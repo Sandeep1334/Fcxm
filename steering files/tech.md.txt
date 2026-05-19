@@ -1,0 +1,46 @@
+# Tech Stack
+
+## Current Status
+
+Project scaffolded. Next.js App Router + TypeScript + Prisma (SQLite for dev, PostgreSQL for prod).
+
+## Stack
+
+| Concern          | Choice |
+|------------------|--------|
+| Language         | TypeScript 5 |
+| Framework        | Next.js 14 (App Router) |
+| Database         | SQLite (dev) / PostgreSQL (prod) via Prisma 5 |
+| Auth             | NextAuth.js v5 (planned) |
+| Styling          | Tailwind CSS 3 |
+| State Management | TanStack Query v5 + Zustand (planned) |
+| Testing          | Vitest + Testing Library (planned) |
+| Package Manager  | npm |
+
+## Common Commands
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Lint
+npm run lint
+
+# Database migrations
+npm run db:migrate
+
+# Generate Prisma client
+npm run db:generate
+
+# Open Prisma Studio
+npm run db:studio
+```
