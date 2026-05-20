@@ -1,0 +1,251 @@
+In the realm of effective coding, prioritizing robustness, maintainability, and scalability is paramount for achieving excellence. This principle applies universally, whether one is working with Salesforce technologies such as LWC, Apex, or Experience Cloud, or any other programming language. Embracing best practices is fundamental for attaining optimal development outcomes. 
+
+Here are the essential principles that can pave the way to excellence. 
+
+Naming Convention 
+
+Error Handling 
+
+Accessibility 
+
+Custom Label and Configuration Driven 
+
+Code Comments 
+
+Code Formatting and Indentation 
+
+Unit Testing 
+
+Best Practices 
+
+  
+
+1. Naming Convention 
+
+Variables, Components, CSS Class Names, Functions and Other Entities 
+
+Use meaningful / descriptive names that reflect the purpose of the variable or function. 
+
+Adhering naming conventions help maintain consistency and readability across the codebase, making it easier for developers to understand and collaborate on the code. 
+
+Avoid abbreviations that may be unclear to others. 
+
+Create concise yet descriptive names. 
+
+Good Practice:	 
+
+Bad Practice: 
+
+ 
+
+Pascal Case (or Upper CamelCase): 
+
+In Pascal Case, the first letter of each word in a compound word is capitalized, including the first word. It's commonly used for naming classes and types in many programming languages. 
+
+Example: AccountController, CustomWrapper 
+
+Usage: Class Names, JavaScript Class name 
+
+camelCase (or lower CamelCase): 
+
+In camelCase, the first letter of the compound word is lowercase, but the first letter of subsequent words is capitalized. 
+
+Example: accountList, userInfo, calculateTotalPrice  
+
+Usage: variables, methods, functionNames, HTML, CSS, JS File Names and objects 
+
+SCREAMING_SNAKE_CASE: 
+
+In SNAKE_CASE, words are written in uppercase letters and separated by underscores. 
+
+Example:  
+
+ 
+
+Usage: Constants, global variables 
+
+Kebab Case (or spinal-case or dash-case): 
+
+In Kebab Case, words are written in lowercase letters and separated by hyphens. 
+
+Example: font-family, background-color, aria-label, <c-hello-world> 
+
+Usage: CSS Names, HTML attributes, Variable Names 
+
+ 
+
+  
+
+2. Error Handling 
+
+Exception Handling 
+
+Handle exceptions gracefully, preventing crashes and ensuring a smooth user experience. 
+
+Encapsulate the code that may throw exceptions within a try block and catch specific exceptions or handle generic errors in the catch block. 
+
+All exceptions need to be pushed to the custom exception handler and logged to custom object (depends on Project) 
+
+Usage: LWC and Apex 
+
+ 
+
+Graceful Error Messages 
+
+Craft error messages that are easy to understand and provide actionable insights into the nature of the error. Include relevant details such as the source of the error. 
+
+Ensure consistency in error message formatting and language throughout the application for a seamless user experience. 
+
+Logging 
+
+Include essential information in log entries, such as timestamps, severity levels, the source of the error, and relevant contextual data. 
+
+Use logging levels appropriately (debug, info, warning, error) to categorize log entries based on their significance 
+
+ 
+
+  
+
+3. Accessibility using Semantic HTML 
+
+Accessibility is vital in software development, ensuring that people with disabilities can use digital products effectively. Making your application accessible expands your user base and meets ethical and legal requirements like the ADA in the US and WCAG globally.  
+
+Semantic HTML elements, conveying meaning to assistive technologies, play a key role. They make it easier for users with disabilities to navigate and understand content.  
+
+Here's how you can enhance HTML accessibility without direct focus on accessibility: 
+
+Use Appropriate HTML Elements: 
+
+Instead of using generic div tags and spans, use semantic HTML elements such as <nav>, <header>, <footer>, <main>, <article>, <section>, and <aside>. 
+
+Semantic elements provide context to assistive technologies about the purpose and structure of the content, aiding users in navigation. 
+
+Provide Descriptive Text: 
+
+Use descriptive text for links and buttons, indicating their purpose or destination. 
+
+For images, use the alt attribute to provide alternative text that describes the content of the image. This is vital for users who rely on screen readers to understand visual content. 
+
+Structure Content with Headings: 
+
+Organize your content using heading elements (<h1> to <h6>) in a hierarchical order. 
+
+Headings help users navigate through the content easily and provide a clear structure to the document. 
+
+Ensure Keyboard Accessibility: 
+
+Make sure all interactive elements are keyboard accessible. Users should be able to navigate through your website using only the keyboard. 
+
+Use appropriate focus styles to indicate which element is currently focused, improving usability for keyboard users. 
+
+Provide Focus Indicators:  
+
+Ensure that interactive elements receive focus states when navigating with a keyboard. 
+
+ 
+
+  
+
+4. Custom Label and Configuration Driven 
+
+Using a configuration-driven approach in software development involves storing configurable values, such as text labels, error messages, or settings, outside of the codebase. This method enables easy modification of these values without changing the underlying code. It offers benefits such as flexibility, maintainability, and scalability. 
+
+Avoid Hardcoding:  
+
+Refrain from hardcoding configuration values directly into the code. Instead, reference these values from the configuration source, allowing for dynamic updates and customization. 
+
+Centralized Configuration Storage:  
+
+Store configuration settings in a centralized location, such as a custom metadata, database, or external service. This centralization ensures consistency and facilitates easier management of configuration values. 
+
+Use Custom Labels (for Salesforce):  
+
+In Salesforce development, leverage Custom Labels to store text values, such as labels, error messages, and help text. Custom Labels provide a convenient way to manage and translate text across different languages. 
+
+Security Considerations:  
+
+Ensure that sensitive configuration settings, such as API keys or credentials, are securely managed and protected. Employ encryption or secure storage mechanisms to safeguard sensitive information. 
+
+ 
+
+  
+
+5. Code Comments 
+
+Code comments and documentation play a crucial role in software development by providing context, explanations, and instructions to developers, maintainers, and users. 
+
+Write comments that are concise, clear, and easy to understand. Avoid ambiguity and use plain language to convey your message effectively. 
+
+Keep your comments and documentation up to date with the code changes. Outdated or inaccurate documentation can lead to confusion and errors. 
+
+Applications: 
+
+Add Comment 
+
+Hide Content 
+
+Hide Inline Content 
+
+Comments in LWC/Apex Components: Use comments within your LWC/Apex components to explain complex logic, document edge cases, and provide insights into your code's functionality. 
+
+Usage: HTML, JS, CSS, Apex 
+
+Syntax: 
+
+ 
+
+  
+
+Author: Author information in code comments provides accountability and attribution, aiding in understanding code ownership and facilitating collaboration among developers. 
+
+ 
+
+  
+
+6. Code Formatting and Indentation 
+
+Code formatting and indentation are vital for writing clear, maintainable code. 
+
+Clear Structure: Proper indentation and formatting provide a clear visual structure to the code, making it easier to follow control flow, loops, conditionals, and function definitions. 
+
+Avoiding Ambiguity: Consistent indentation helps prevent syntax errors and ambiguity in the code, reducing the likelihood of misunderstandings and improving overall code quality. 
+
+Automated Formatting Tools: Utilize automated code formatting tools like Prettier to enforce coding standards and ensure consistency across the codebase. 
+
+Bad Practice:  
+
+No clear structure, lacks proper indentation and difficult to understand logic and the flow quickly 
+
+ 
+
+Good Practice: 
+
+Well formatted with consistent indentation, descriptive comment and makes code more readable and maintainable 
+
+ 
+
+  
+
+7. Unit Testing 
+
+Unit testing is a core practice in software development focused on verifying that specific units of code, such as functions, methods, or classes, operate as intended. 
+
+Unit tests must be written as soon as the functionality is implemented 
+
+Development will only be considered complete once unit tests are passed. 
+
+  
+
+8. Best Practices 
+
+Adherence to best practices ensures consistency, efficiency, and quality throughout the development lifecycle, promoting robust and scalable solutions. 
+
+Detailed Best practices for technical modules will be covered in the next sprint 
+
+  
+
+  
+
+“The code we're developing is intended to be the final version; there should be no notion of writing code now and addressing issues later.” 
+
+ 
